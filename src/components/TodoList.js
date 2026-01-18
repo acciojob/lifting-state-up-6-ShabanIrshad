@@ -9,9 +9,10 @@ const TodoList =(props)=>{
             <h2>Child Component</h2>
             <ul>
                  {todos.map((todo,key)=>{
-                    return <li key={key}><p>{todo.text}</p>{todo.complete?'':<button onClick={()=>handleComplete(key)}>Complete</button>}</li>
+                    return <li key={key}><p>{todo.text}</p>{!todo.complete && <button onClick={()=>handleComplete(key)}>Complete</button>}</li>
                  })}
             </ul>
+            
            
         </>
 
